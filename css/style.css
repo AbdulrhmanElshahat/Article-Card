@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap');
+body{
+    font-family: 'Manrope', sans-serif;
+    font-size: 13px;
+}
+*,*::after,*::before{
+    box-sizing: border-box;
+}
+.container{
+    width: 100vw;
+    min-height: 100vh;
+    background-color: #ecf2f8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0  20px;
+}
+.card{
+    display: flex;
+    background-color: #FFF;
+    max-width: 800px;
+    border-radius:10px
+}
+@media (max-width:900px){
+    .card{
+        flex-direction: column;
+        max-width: 355px;
+    }
+}
+.card-image{
+    width: 38%;
+    overflow: hidden;
+    position: relative;
+}
+.card-image img{
+    width: 371px;
+    height: 100%;
+    position: absolute;
+    right: -67px;
+    border-radius: 10px 0 0 10px;
+}
+@media (max-width:900px){
+    .card-image{
+        width:100%
+    }
+    .card-image img{
+        width: 100%;
+        height: 200px;
+        position:static;
+        border-radius: 10px 10px 0 0;
+    }
+}
+.card-content{
+    width: 62%;
+    padding: 40px;
+}
+.card-content p {
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+.card-content-header-text{
+    font-weight: 700;
+    font-size: 23px;
+    color: #6d7f97;
+}
+.card-content-text{
+    font-weight: 500;
+    color: #9eafc2;
+    font-size: 15px;
+}
+@media (max-width:900px){
+    .card-content{
+        width: 100%;
+        padding: 20px;
+    }
+    .card-content p {
+        margin-bottom: 15px;
+        line-height: 1.4;
+    }
+    .card-content-header-text{
+        font-size: 20px;
+    }
+    .card-content-text{
+        font-size: 13px;
+    }
+}
+.card-content-info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.info-personal{
+    display: flex;
+    align-items: center;
+}
+.info-personal-img{
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+}
+.info-nameAndBrithday span{
+    display: block;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.5;
+}
+.info-nameAndBrithday .name{
+    color: #48556a;
+    font-weight: 700;
+}
+.info-nameAndBrithday .brithday{
+    color: #9eafc2;
+}
+
+.share{
+    position: relative;
+}
+.share .share-links{
+    position: absolute;
+    display: none;
+    align-items: center;
+    padding: 15px 34px;
+    background: #48556a;
+    border-radius: 8px;
+    color: #9eafc2;
+    top: -70px;
+    left: -85px; 
+}
+.share .share-links::before{
+    content: '';
+    position: absolute;
+    border: 10px solid;
+    border-color: #48556a transparent transparent transparent;
+    bottom: -20px;
+    left: 50%;
+    transform: translate(-50%);
+}
+@media (max-width:900px){
+    .share .share-links{
+    width: 350px;
+    height: 70px;
+    top: -7px;
+    left: -295px;
+    border-radius: 0 0 10px 10px;
+    padding: 20px 25px
+    }
+    .share .share-links::before{
+        content: none;
+    }
+}
+.share-links span{
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-right: 15px;
+    
+}
+.share-links a{
+    color: #FFF;
+    margin-right: 15px;
+    font-size: 16px;
+    font-weight: 500;
+}
+.share-links a:last-child{
+    margin-right: 0;
+}
+.share .share-links.show{
+    display: flex;
+}
+.share-icon{
+    color: #6d7f97;
+    background-color: #ecf2f8;
+    padding: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    transition:.1s
+}
+.share-icon.opened{
+    color: #FFF;
+    background: #48556a;
+}
+@media (max-width:900px){
+    .share-icon.opened{
+        background: #6d7f97;
+        top: 10px;
+    }
+}
+.attribution { font-size: 11px; text-align: center; margin-top: 50px; }
+.attribution a { color: #3e52a3; }
